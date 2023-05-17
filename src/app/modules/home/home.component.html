@@ -3,11 +3,10 @@
 
   <po-menu [p-menus]="menus"></po-menu>
 
-    <po-page-dynamic-search
-      p-title="Encomende suas pecas"
-      [p-filters]="filtersOptions"
-    >
-
+  <po-page-dynamic-search
+    p-title="Encomende suas peças"
+    [p-filters]="filtersOptions"
+  >
     <div class="po-row">
       <po-widget
         class="po-sm-12 po-md-8 po-lg-6"
@@ -16,15 +15,14 @@
         p-primary-label="Comprar"
         *ngFor="let item of tools"
       >
-        <po-avatar class="po-md-4" p-size="lg" [p-src]="item.foto" > </po-avatar>
+        <po-avatar class="po-md-4" p-size="lg" [p-src]="item.foto"></po-avatar>
 
         <div class="po-md-8">
-          <p><strong>Categoria:</strong> {{ item.categoria }}</p>
-          <p><strong>Marca:</strong> {{item.marca }}</p>
-          <p><strong>Ano:</strong> {{ item.ano }}</p>
+          <p><strong>Categoria:</strong> {{ item.category }}</p>
+          <p><strong>Marca:</strong> {{ item.brand }}</p>
+          <p><strong>Ano:</strong> {{ item.year }}</p>
         </div>
       </po-widget>
     </div>
-
   </po-page-dynamic-search>
 </div>
